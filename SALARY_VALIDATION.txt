@@ -1,0 +1,17 @@
+Validation — 30 October 2026
+Xcode 27.1 (27A9275)
+iPhone generic device: BUILD SUCCEEDED (code signing disabled; no installation).
+iOS Simulator generic destination: TEST BUILD SUCCEEDED (app + XCTest bundle).
+Shared-service macOS test harness: 86 tests executed, 0 failures.
+The harness uses the shared attendance/salary services, models, utilities and XCTest sources.
+Calendar holiday creation, removal, historical recalculation, persistence and merge/replace restore tests passed.
+The actual Core Graphics/Core Text salary PDF renderer ran in the test harness.
+PDFKit checks confirmed one page, financial values, estimate language and absence of sample labels in normal exports.
+A separate clearly labelled sample PDF was rendered with Poppler and visually inspected; no clipping or overlaps observed.
+SwiftData V1 → V2 migration and salary persistence across disk containers passed.
+Native launch storyboard, assets, splash and accent-color UI compiled in the iOS builds.
+No usable installed iOS simulator runtime; iPhone UI/launch behavior has not been visually tested on a device here.
+Original attendance UIKit PDF code remains unchanged; its runtime was not exercised by the macOS harness.
+App target: 35 Swift source files, no XCTest sources. Test target: 2 XCTest source files.
+Unified branding: generated logo used in the light/dark iPhone app icons, launch screen, splash and invoice/PDF assets. App icons are opaque 1024 × 1024 PNGs. Original uploads preserved in MyAttendance-OriginalUploadedAssets.zip.
+Splash handoff fix: reused the native launch storyboard at runtime, replaced root-wide dismissal animation with a splash-only opacity fade, and mounted the Dashboard underneath before dismissal. iPhone build passed. Visual confirmation on the physical phone is still required.

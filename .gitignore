@@ -1,0 +1,21 @@
+# macOS and Xcode user state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+
+# Build products
+DerivedData/
+build/
+.build/
+
+# Local archives and temporary previews
+*.zip
+tmp/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.p12
+*.mobileprovision
+*.provisionprofile
